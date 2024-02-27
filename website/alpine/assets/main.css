@@ -1,0 +1,30 @@
+body {
+  background-color: $dt('alpine.body.backgroundColor');
+  background-image: linear-gradient($dt('color.primary.600') 1%, $dt('alpine.body.backgroundColor') 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @sm {
+    background-image: radial-gradient(
+        circle at top left,
+        $dt('color.primary.600'),
+        $dt('alpine.body.backgroundColor') 50%
+    );
+  }
+  color: $dt('alpine.body.color');
+}
+
+/* Color scheme images helper classes */
+.light-img {
+  display: block;
+}
+.dark-img {
+  display: none;
+}
+@dark {
+  .dark-img {
+    display: block;
+  }
+  .light-img {
+    display: none;
+  }
+}
